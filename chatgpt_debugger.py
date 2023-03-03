@@ -1,8 +1,11 @@
 import os
 import sys
-import re
 import openai
 import subprocess
+from dotenv import load_dotenv
+
+load_dotenv('.env')
+openai.api_key = os.getenv('OPENAI_API_KEY')
 
 filename = sys.argv[1]
 proc = subprocess.Popen(["python3", filename], stderr=subprocess.PIPE)
@@ -16,8 +19,6 @@ print(error)
 
 with open(filename, 'r') as file:
     code = file.read()
-
-openai.api_key = os.getenv('OPENAI_API_KEY')
 
 response = openai.ChatCompletion.create(
     model="gpt-3.5-turbo",
