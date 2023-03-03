@@ -29,6 +29,24 @@ pip install -r requirements.txt
 2. エラーメッセージが出力された場合は、ChatGPTが自動的にエラーメッセージを解析し、エラーの原因と解決策を生成します。
 3. ChatGPTの生成したメッセージを確認し、必要に応じて対処します。
 
+## サンプル
+
+```sh
+$ python3 chatgpt_debugger.py sample.py
+Traceback (most recent call last):
+  File "sample.py", line 1, in <module>
+    print("1" + 1)
+TypeError: can only concatenate str (not "int") to str
+
+このエラーは、文字列と整数を結合しようとしているため発生しています。文字列と整数は異なるデータ型であり、直接結合することはできません。
+
+解決方法としては、文字列と整数を結合する場合は、整数を文字列に変換する必要があります。例えば、以下のように修正することができます。
+
+print("1" + str(1))
+
+これにより、整数の1が文字列"1"に変換され、文字列同士の結合が行われます。
+```
+
 ## ライセンス
 MIT License
 
