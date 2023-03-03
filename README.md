@@ -3,7 +3,7 @@
 # ChatGPT Debugger
 
 ChatGPT Debuggerは、OpenAIの言語モデルであるChatGPTを用いたPythonコードのデバッグ支援ツールです。  
-プログラマがコードとエラーメッセージを入力すると、ChatGPTがエラーの原因と解決策を解説するメッセージを生成します。
+プログラマがコードを入力すると、ChatGPTがエラーの原因と解決策を解説するメッセージを生成します。
 
 ## 必要なもの
 - Python 3.x
